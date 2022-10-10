@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Home = () => {
     return (
         <div>
             <div className="hero min-h-screen" style={{ backgroundImage: `url("https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=740&t=st=1665423289~exp=1665423889~hmac=b2a1304226cc487ee9a26b2ffb6635ebe847fe54144e6d7defe7c47a4745b2d9")` }}>
@@ -17,4 +17,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Home;
