@@ -21,7 +21,7 @@ const Home = () => {
             </h1>
             <p className="mb-5">
               Play our amazing 'Programming language quiz' that will test your
-              knowledge about the concepts of HTML,JS,React
+              knowledge about the concepts of HTML,CSS,JS,React
             </p>
             <button className="btn btn-primary">Let's Started</button>
           </div>
