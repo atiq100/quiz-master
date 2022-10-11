@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import AllTopics from './components/AllTopic';
 import Blog from './components/Blog';
 import ErrorPage from './components/ErrorPage';
 import Home from './components/Home';
@@ -28,8 +29,16 @@ function App() {
           },
         },
         {
-          path:'/topics/:topicId',
+          path:'/topics',
           element:<Topics></Topics>,
+          loader: async () => {
+            return fetch ('https://openapi.programming-hero.com/api/quiz')
+          },
+          
+        },
+        {
+          path:'/topics/:topicId',
+          element:<AllTopics></AllTopics>,
           loader: async ({params})=>{
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
 
@@ -37,7 +46,8 @@ function App() {
         },
         {
           path:'/statistics',
-          element:<Statistic></Statistic>
+          element:<Statistic></Statistic>,
+          
         },
         {
           path:'/blog',

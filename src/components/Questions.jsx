@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faEye } from '@fortawesome/free-solid-svg-icons'
 const Questions = ({ quiz }) => {
   const { question, options, correctAnswer, id } = quiz;
 
@@ -7,7 +8,7 @@ const Questions = ({ quiz }) => {
     <div className="card w-full md:w-6/12 bg-base-100 shadow-xl">
       <div className="card-body">
       <div className="card-actions justify-end">
-      <label htmlFor={id} className="btn btn-primary modal-button btn-xs">View Answer</label>
+      <label htmlFor={id} className=" modal-button "><FontAwesomeIcon icon={faEye} title='show Answer'className="cursor-pointer text-indigo-500 font-bold text-xl"></FontAwesomeIcon></label>
       
         </div>
         <h2 className="card-title">{question.slice(3, -4)}</h2>
@@ -22,8 +23,8 @@ const Questions = ({ quiz }) => {
         <div>
           <div className="form-control items-start ">
            {
-            options.map((p)=>
-                <label className="cursor-pointer label">
+            options.map((p,index)=>
+                <label className="cursor-pointer label" key={index}>
               
                 <input
                   type="checkbox"
