@@ -7,9 +7,18 @@ const Questions = ({ quiz }) => {
     <div className="card w-full md:w-6/12 bg-base-100 shadow-xl">
       <div className="card-body">
       <div className="card-actions justify-end">
-          <button className="btn btn-primary btn-sm">View Answer</button>
+      <label htmlFor={id} className="btn btn-primary modal-button btn-xs">View Answer</label>
+      
         </div>
         <h2 className="card-title">{question.slice(3, -4)}</h2>
+        <input type="checkbox" id={id} className="modal-toggle" />
+<div className="modal">
+  <div className="modal-box relative">
+    <label htmlFor={id} className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <h3 className="text-lg font-bold">Answer:</h3>
+    <p className="py-4">{correctAnswer}</p>
+  </div>
+</div>
         <div>
           <div className="form-control items-start ">
            {
@@ -24,7 +33,7 @@ const Questions = ({ quiz }) => {
                 <span className="label-text ml-2">{p}</span>
               </label>)
            }
-           
+          
           </div>
         </div>
        
