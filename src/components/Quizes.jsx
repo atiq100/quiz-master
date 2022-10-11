@@ -1,7 +1,12 @@
 import React from "react";
+import {  useNavigate } from "react-router-dom";
 
 const Quizes = ({ quiz }) => {
-  const { name, logo } = quiz;
+  const navigate = useNavigate();
+  const navigateHandle = ()=>{
+    navigate(`/topics/${id}`)
+}
+  const { name, logo,id } = quiz;
   return (
    
      <div className="card w-72 p-0 mx-0 mt-5 bg-slate-800 shadow-xl">
@@ -11,7 +16,7 @@ const Quizes = ({ quiz }) => {
       <div className="card-body">
         <h2 className="card-title text-white">{name}</h2>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Topics</button>
+          <button onClick={navigateHandle} className="btn btn-primary">Topics</button>
         </div>
       </div>
     </div>

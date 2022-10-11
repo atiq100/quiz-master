@@ -28,8 +28,12 @@ function App() {
           },
         },
         {
-          path:'/topics',
-          element:<Topics></Topics>
+          path:'/topics/:topicId',
+          element:<Topics></Topics>,
+          loader: async ({params})=>{
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.topicId}`)
+
+          },
         },
         {
           path:'/statistics',
