@@ -68,3 +68,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Name
+# Primo Quiz
+## Description
+This website provides facility to test your programming  knowledge like(HTML,CSS,JS,React).It provides a good platform, where a tech lover or student judges there skill but also they can improve knowledge/skill at the same time.
+## Funtionality
+- user can start quiz by choosing multiple topic like(HTML,CSS,JS,React).
+- user can show correct answer if needed.
+- When select quiz answer user can see the  answer is  right or wrong.
+- User can see the statistics of each topic in chart.
+## Implementation Technology
+- HTML
+- Tailwind CSS
+- Javascript
+- React
+## Third Part Library
+- daisy ui
+- React Toastify
+- Fontawesome Icon
+## Tools
+- Vs Code
+## API LINK
+ Get all quiz topics: (https://openapi.programming-hero.com/api/quiz)
+ Get topic details by topic id: (https://openapi.programming-hero.com/api/quiz/${id})
+ ## Live website Link
+ 
