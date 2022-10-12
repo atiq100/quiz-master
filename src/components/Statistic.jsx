@@ -34,8 +34,9 @@ const Statistic = () => {
 
   return (
     <div className="md:h-screen h-96 flex justify-center items-center">
+      
       <LineChart
-        width={400}
+        width={350}
         height={200}
         data={datas}
         margin={{
