@@ -82,7 +82,7 @@ This website provides facility to test your programming  knowledge like(HTML,CSS
 - Tailwind CSS
 - Javascript
 - React
-## Third Part Library
+## Third Party Library
 - daisy ui
 - React Toastify
 - Fontawesome Icon

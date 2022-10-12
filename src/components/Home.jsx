@@ -30,7 +30,7 @@ const Home = () => {
       <div>
         <h3 className="text-3xl font-bold ml-6 mt-4 ">Topic Lists</h3>
       </div>
-      <div className="grid md:grid-cols-4  justify-items-center ">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4  justify-items-center ">
         {quizes.map((quiz) => (
           <Quizes key={quiz.id} quiz={quiz}></Quizes>
         ))}
