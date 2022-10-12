@@ -90,6 +90,9 @@ This website provides facility to test your programming  knowledge like(HTML,CSS
 - Vs Code
 ## API LINK
  Get all quiz topics: (https://openapi.programming-hero.com/api/quiz)
+
  Get topic details by topic id: (https://openapi.programming-hero.com/api/quiz/${id})
+
  ## Live website Link
- 
+ https://primoquiz-app.netlify.app/
+
