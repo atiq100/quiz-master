@@ -1,13 +1,14 @@
 import React from "react";
+import { toast } from "react-toastify";
 const Options = ({ multiple, quiz }) => {
-  console.log(typeof multiple);
+  //console.log(typeof multiple);
   const { correctAnswer } = quiz;
-  console.log(correctAnswer);
+  //console.log(correctAnswer);
   const correct = () => {
     if (correctAnswer === multiple) {
-      alert("right");
+      toast.success("Your answer is correct!");
     } else {
-      alert("wrong");
+        toast.error("Your answer is wrong!");
     }
   };
   return (
@@ -15,6 +16,7 @@ const Options = ({ multiple, quiz }) => {
       <input
         onClick={correct}
         type="radio"
+        name="radio"
         className="radio radio-secondary"
         value={multiple}
       />
