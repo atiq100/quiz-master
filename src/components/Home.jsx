@@ -1,10 +1,10 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Quizes from "./Quizes";
 
 const Home = () => {
-  const data = useLoaderData()
-  const quizes = data.data
+  const data = useLoaderData();
+  const quizes = data.data;
   return (
     <div>
       <div
@@ -23,19 +23,18 @@ const Home = () => {
               Play our amazing 'Programming language quiz' that will test your
               knowledge about the concepts of HTML,CSS,JS,React
             </p>
-            <button className="btn btn-primary">Let's Started</button>
+            <button className="btn btn-primary"><Link to='/topics'>Let's Start</Link></button>
           </div>
         </div>
       </div>
       <div>
         <h3 className="text-3xl font-bold ml-6 mt-4 ">Topic Lists</h3>
       </div>
-       <div className="grid md:grid-cols-4  justify-items-center ">
-       
-       {
-          quizes.map(quiz =><Quizes key={quiz.id} quiz={quiz}></Quizes>)
-        }
-       </div>
+      <div className="grid md:grid-cols-4  justify-items-center ">
+        {quizes.map((quiz) => (
+          <Quizes key={quiz.id} quiz={quiz}></Quizes>
+        ))}
+      </div>
     </div>
   );
 };
